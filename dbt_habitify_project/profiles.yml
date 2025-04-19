@@ -1,0 +1,13 @@
+dbt_habitify_project:
+  target: prod
+  outputs:
+    prod:
+      type: postgres
+      host: "{{ env_var('DB_HOST_PROD') }}"
+      user: "{{ env_var('DB_USER_PROD') }}"
+      password: "{{ env_var('DB_PASSWORD_PROD') }}"
+      port: 5432
+      dbname: "{{ env_var('DB_NAME_PROD') }}"
+      schema: stg
+      threads: 1
+      sslmode: "{{ env_var('DB_SSL_MODE_PROD') }}"

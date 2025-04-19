@@ -1,0 +1,98 @@
+[0m12:38:28.425745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001621D35A150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001621D2F3260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001621FB40200>]}
+
+
+============================== 12:38:28.428248 | 85193fc6-b351-4282-843e-5a6edc6cf7af ==============================
+[0m12:38:28.428248 [info ] [MainThread]: Running with dbt=1.9.4
+[0m12:38:28.429247 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\User\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt init', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m12:38:39.030027 [debug] [MainThread]: Starter project path: C:\muno_environment\projects\habitify\.venv\Lib\site-packages\dbt\include\starter_project
+[0m12:38:39.042057 [info ] [MainThread]: 
+Your new dbt project "dbt_habitify_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:38:39.042057 [info ] [MainThread]: Setting up your profile.
+[0m12:39:11.445797 [info ] [MainThread]: Profile dbt_habitify_project written to C:\Users\User\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m12:39:11.446795 [debug] [MainThread]: Command `dbt init` succeeded at 12:39:11.446795 after 43.12 seconds
+[0m12:39:11.446795 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001621FA3C170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001621FF14C80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001621FF15670>]}
+[0m12:39:11.446795 [debug] [MainThread]: Flushing usage events
+[0m12:39:12.118291 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:39:16.866436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F892AB9A00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F896222450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F896155B20>]}
+
+
+============================== 12:39:16.869775 | de8179ce-09bd-44ad-aa19-dd176c2f4355 ==============================
+[0m12:39:16.869775 [info ] [MainThread]: Running with dbt=1.9.4
+[0m12:39:16.870775 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\User\\.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m12:39:16.886755 [info ] [MainThread]: dbt version: 1.9.4
+[0m12:39:16.886755 [info ] [MainThread]: python version: 3.12.6
+[0m12:39:16.886755 [info ] [MainThread]: python path: C:\muno_environment\projects\habitify\.venv\Scripts\python.exe
+[0m12:39:16.887897 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m12:39:16.939012 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.redshift'
+[0m12:39:16.939012 [info ] [MainThread]: Using profiles dir at C:\Users\User\.dbt
+[0m12:39:16.939012 [info ] [MainThread]: Using profiles.yml file at C:\Users\User\.dbt\profiles.yml
+[0m12:39:16.940359 [info ] [MainThread]: Using dbt_project.yml file at C:\muno_environment\projects\habitify\dbt_project.yml
+[0m12:39:16.940359 [info ] [MainThread]: Configuration:
+[0m12:39:16.940359 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m12:39:16.941357 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m12:39:16.941357 [info ] [MainThread]: Required dependencies:
+[0m12:39:16.941357 [debug] [MainThread]: Executing "git --help"
+[0m12:39:16.962656 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m12:39:16.962656 [debug] [MainThread]: STDERR: "b''"
+[0m12:39:16.962656 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:39:16.962656 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m12:39:16.964161 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m12:39:16.964161 [info ] [MainThread]: Could not load dbt_project.yml
+Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "planning_dbt", target "dev" invalid: Runtime Error
+    Could not find adapter type redshift!
+
+
+[0m12:39:16.964161 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\muno_environment\projects\habitify\dbt_project.yml> not found
+
+[0m12:39:16.965166 [debug] [MainThread]: Command `dbt debug` failed at 12:39:16.965166 after 0.21 seconds
+[0m12:39:16.966167 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F895EF3BF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F890075B20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F896622E40>]}
+[0m12:39:16.966167 [debug] [MainThread]: Flushing usage events
+[0m12:39:17.608620 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:06:40.338694 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A28AAE7C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A28A5CC5F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A28AAE6600>]}
+
+
+============================== 15:06:40.341930 | d4595417-f9e0-48f6-9b8d-e94ea97e9160 ==============================
+[0m15:06:40.341930 [info ] [MainThread]: Running with dbt=1.9.4
+[0m15:06:40.342929 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\User\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run --select stg_areas_habitify', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:06:40.342929 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\muno_environment\projects\habitify\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:06:40.343929 [debug] [MainThread]: Command `dbt run` failed at 15:06:40.343929 after 0.10 seconds
+[0m15:06:40.343929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A28AC370B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A28A5CC5F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A28AC56EA0>]}
+[0m15:06:40.344800 [debug] [MainThread]: Flushing usage events
+[0m15:06:41.008601 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:07:18.861066 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCCB38DE20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCCB750BC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCCDA2C170>]}
+
+
+============================== 15:07:18.866304 | 0437536d-b323-49d7-a85f-105856b6461c ==============================
+[0m15:07:18.866304 [info ] [MainThread]: Running with dbt=1.9.4
+[0m15:07:18.867340 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\User\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt run --model stg_areas_habitify', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:07:18.867340 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\muno_environment\projects\habitify\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m15:07:18.867340 [debug] [MainThread]: Command `dbt run` failed at 15:07:18.867340 after 0.09 seconds
+[0m15:07:18.867340 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCCD81D8E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCCDA2C170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCCE3A7FB0>]}
+[0m15:07:18.867340 [debug] [MainThread]: Flushing usage events
+[0m15:07:19.504508 [debug] [MainThread]: An error was encountered while trying to flush usage events

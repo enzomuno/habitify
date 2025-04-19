@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg_areas_habitify
+    description: "Tabela staging para armazenar os dados de áreas extraídos do Habitify."
+    columns:
+      - name: area_id
+        description: "ID único da área."
+        tests:
+          - not_null
+          - unique
+      - name: area_name
+        description: "Nome da área (por exemplo, 'Saúde', 'Produtividade')."
+        tests:
+          - not_null
+      - name: created_date_br
+        description: "Data de criação da área convertida para o fuso horário de São Paulo (UTC-3)."
+        tests:
+          - not_null
+      - name: updated_at
+        description: "Timestamp da última atualização, gerado automaticamente pelo DBT."
+        tests:
+          - not_null
