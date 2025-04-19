@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine, text
 from sqlalchemy.exc import SQLAlchemyError
 from src.config import get_db_conn
+from src.extract.utils import to_iso8601_23
 import json
 
 # ====FUNCAO PARA REALIZAR INGESTAO DAS AREAS JÁ CADASTRADAS====
@@ -147,17 +148,17 @@ def insert_journal_raw(data: list[dict]):
             for item in data:
                 query = text("""
                     INSERT INTO raw.journal_habitify (
-                        id, progress
+                        id, progress, created_at
                     ) VALUES (
-                        :id, :progress
+                        :id, :progress, :created_at
                     )
-                    ON CONFLICT (id) DO NOTHING;  -- Evita duplicação de dados
                 """)
 
                 # Convertendo os campos do tipo dict/list para JSON
                 conn.execute(query, {
                     "id": item["id"],
                     "progress": json.dumps(item["progress"]),  # Convertendo dict para JSON
+                    "created_at": to_iso8601_23()
                 })
             conn.commit()
         
