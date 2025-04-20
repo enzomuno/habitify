@@ -1,5 +1,4 @@
 import requests
-import pandas as pd
 from src.config import get_api_key
 from src.extract.utils import to_iso8601_21, to_iso8601_23, today
 

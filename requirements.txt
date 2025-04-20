@@ -1,0 +1,6 @@
+requests
+pytz
+sqlalchemy
+dbt-core
+dbt-postgres
+python-dotenv
