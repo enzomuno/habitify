@@ -3,7 +3,8 @@ name: Run Python Script
 on:
   schedule:
     - cron: '0 2 * * *'  # Executa às 02:00 UTC = 23:00 BRT
-  workflow_dispatch:  # Permite rodar manualmente a partir do GitHub
+
+  workflow_dispatch:
 
 jobs:
   run_python_script:
@@ -32,7 +33,5 @@ jobs:
         DB_PORT: ${{ secrets.DB_PORT_PROD }}
         DB_SSLMODE: ${{ secrets.DB_SSLMODE_PROD }}
         API_KEY: ${{ secrets.API_KEY }}
-        PYTHONPATH: ${{ github.workspace }}/src  # Define o PYTHONPATH para incluir o diretório src
       run: |
-        cd src
-        python -m main
+        python -m src.main
