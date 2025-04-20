@@ -31,12 +31,12 @@ jobs:
 
     - name: Run Python Script
       env:
-        DB_HOST: ${{ secrets.DB_HOST_PROD }}
-        DB_USER: ${{ secrets.DB_USER_PROD }}
-        DB_PASSWORD: ${{ secrets.DB_PASSWORD_PROD }}
-        DB_NAME: ${{ secrets.DB_NAME_PROD }}
-        DB_PORT: ${{ secrets.DB_PORT_PROD }}
-        DB_SSLMODE: ${{ secrets.DB_SSLMODE_PROD }}
+        DB_HOST_PROD: ${{ secrets.DB_HOST_PROD }}
+        DB_USER_PROD: ${{ secrets.DB_USER_PROD }}
+        DB_PASSWORD_PROD: ${{ secrets.DB_PASSWORD_PROD }}
+        DB_NAME_PROD: ${{ secrets.DB_NAME_PROD }}
+        DB_HOST_PROD: ${{ secrets.DB_PORT_PROD }}
+        DB_SSL_MODE_PROD: ${{ secrets.DB_SSLMODE_PROD }}
         API_KEY: ${{ secrets.API_KEY }}
       run: |
         python -m src.main
