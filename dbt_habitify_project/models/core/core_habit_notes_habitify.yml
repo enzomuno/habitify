@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: core_habit_notes_habitify
+    description: "Tabela core para armazenar os dados de 'notes' registrados diariamente para cada hábito. Já com regras de negócios aplicadas"
+    columns:
+      - name: note_id
+        description: "Coluna que armazena os dados sobre ids de cada nota registrada para cada hábito"
+        tests:
+          - not_null
+          - unique
+      - name: note_text
+        description: "Coluna que armazena os dados sobre conteúdos textuais registrados em cada nota"
+        tests:
+          - not_null
+      - name: created_at_brt
+        description: "Coluna que armazena os dados sobre data e hora de criação da nota. Já vem da API como local time -03:00"
+        tests:
+          - not_null
+      - name: note_type
+        description: "Coluna que armazena os dados sobre o tipo da nota criada. Quando 1, texto e quado 2, imagem"
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1,2]
+      - name: habit_id
+        description: "Coluna que armazena os dados sobre o id do hábito o qual foi criado a nota"
+        tests:
+          - not_null
+      - name: updated_at_brt
+        description: "Coluna que armazena os dados sobre data e hora do processamento dos dados. Transformados em UTC -03:00"
+        tests:
+          - not_null

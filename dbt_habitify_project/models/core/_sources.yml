@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: core
+    database: habitifyprod
+    schema: core
+    tables:
+      - name: areas_habitify
+        description: "Tabela contendo os dados das áreas de 'habits' já tratados com regras de negócios"
+      - name: moods_habitify
+        description: "Tabela contendo os dados das áreas de 'moods' já tratados com regras de negócios"
+      - name: habit_notes_habitify
+        description: "Tabela contendo os dados das áreas de 'notes' já tratados com regras de negócios"

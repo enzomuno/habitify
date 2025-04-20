@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: raw
+    database: habitifyprod
+    schema: raw
+    tables:
+      - name: areas_habitify
+        description: "Tabela contendo os dados raw de 'areas' cadastradas"
+      - name: moods_habitify
+        description: "Tabela contendo os dados raw de 'moods' registrados diariamente"
+      - name: habit_notes_habitify
+        description: "Tabela contendo os dados raw de 'notes' registrados diariamente para cada hábito"
+      - name: journal_habitify
+        description: "Tabela contendo os dados raw de 'journal' que falam sobre progressos registrados diariamente para cada hábito"
+      - name: habits_habitify
+        description: "Tabela contendo os dados raw de 'habits' cadastrados"

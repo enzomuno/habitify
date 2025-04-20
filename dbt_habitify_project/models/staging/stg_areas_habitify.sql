@@ -1,5 +1,3 @@
-{{ config(materialized='view') }}
-
 -- Import
 WITH source AS (
     SELECT
@@ -16,8 +14,8 @@ processed AS (
     SELECT
         id AS area_id,
         name AS area_name,
-        created_at AT TIME ZONE 'UTC' AT TIME ZONE 'America/Sao_Paulo' AS created_date_br,
-        NOW() AS updated_at
+        created_at AS created_at,
+        CURRENT_TIMESTAMP AT TIME ZONE 'UTC' AS updated_at
     FROM source
 )
 

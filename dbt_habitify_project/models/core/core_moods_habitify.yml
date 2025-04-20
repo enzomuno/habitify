@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: core_moods_habitify
+    description: "Tabela core para armazenar os dados de 'moods' extraídos da stg com dados já tratados e regras de negócios."
+    columns:
+      - name: mood_id
+        description: "Coluna que armazena os ids únicos dos 'moods'."
+        tests:
+          - not_null
+          - unique
+      - name: created_at_brt
+        description: "Coluna que armazena a data de registro do 'mood', já transformado para local time -03:00."
+        tests:
+          - not_null
+      - name: mood_value
+        description: "Coluna que armazena os valores de 'moods', que variam de 0 a 5."
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1,2,3,4,5]
+      - name: updated_at_brt
+        description: "Coluna que armazena o timestamp do processamento de dados, já transformado para local time -03:00."
+        tests:
+          - not_null

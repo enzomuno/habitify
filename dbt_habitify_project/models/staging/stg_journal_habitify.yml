@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: stg_journal_habitify
+    description: "Tabela staging para armazenar os dados de 'journal' registrados para cada hábito diariamente, com os campos do JSONB desaninhados."
+    columns:
+      - name: journal_id
+        description: "ID único do registro de journal."
+        tests:
+          - not_null
+          - unique
+
+      - name: created_at
+        description: "Data e hora de criação do registro, em UTC -03:00."
+        tests:
+          - not_null
+
+      - name: unit_type
+        description: "Tipo de unidade usada para o progresso (ex: km, min, páginas)."
+        tests:
+          - not_null
+
+      - name: periodicity
+        description: "Periodicidade do hábito monitorado (ex: daily, weekly)."
+        tests:
+          - not_null
+
+      - name: target_value
+        description: "Valor-alvo que o usuário pretende atingir para o hábito no período especificado."
+        tests:
+          - not_null
+
+      - name: current_value
+        description: "Valor atual de progresso registrado pelo usuário no período especificado."
+        tests:
+          - not_null
+
+      - name: reference_date
+        description: "Data de referência do progresso, geralmente representa o dia em que a ação foi realizada, no UTC."
+        tests:
+          - not_null

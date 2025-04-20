@@ -13,8 +13,8 @@ models:
         description: "Nome da área (por exemplo, 'Saúde', 'Produtividade')."
         tests:
           - not_null
-      - name: created_date_br
-        description: "Data de criação da área convertida para o fuso horário de São Paulo (UTC-3)."
+      - name: created_at
+        description: "Data de criação da área no UTC 00:00"
         tests:
           - not_null
       - name: updated_at

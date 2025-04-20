@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_moods_habitify
+    description: "Tabela staging para armazenar os dados de moods registrados diariamente."
+    columns:
+      - name: mood_id
+        description: "ID único do mood."
+        tests:
+          - not_null
+          - unique
+      - name: created_at
+        description: "Data de criação do mood no UTC 00:00."
+        tests:
+          - not_null
+      - name: mood_value
+        description: "Valor referente ao mood registrado, vai de 0 a 5."
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1,2,3,4,5]
+      - name: updated_at
+        description: "Timestamp da última atualização, gerado automaticamente pelo DBT, no UTC 00:00."
+        tests:
+          - not_null

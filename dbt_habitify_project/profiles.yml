@@ -8,6 +8,6 @@ dbt_habitify_project:
       password: "{{ env_var('DB_PASSWORD_PROD') }}"
       port: 5432
       dbname: "{{ env_var('DB_NAME_PROD') }}"
-      schema: stg
+      schema: dbt
       threads: 1
       sslmode: "{{ env_var('DB_SSL_MODE_PROD') }}"

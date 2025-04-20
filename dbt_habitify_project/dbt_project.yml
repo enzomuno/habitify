@@ -33,7 +33,11 @@ models:
   dbt_habitify_project:
     staging:
       +materialized: view
+      +schema: staging  # Definindo o schema 'staging' para os modelos da pasta 'staging'
     core:
       +materialized: view
+      +schema: core     # Definindo o schema 'core' para os modelos da pasta 'core'
     mart:
       +materialized: view
+      +schema: mart     # Definindo o schema 'mart' para os modelos da pasta 'mart'
+
