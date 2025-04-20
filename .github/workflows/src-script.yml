@@ -1,0 +1,38 @@
+name: Run Python Script
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Executa às 02:00 UTC = 23:00 BRT
+
+  workflow_dispatch:
+
+jobs:
+  run_python_script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run Python Script
+      env:
+        DB_HOST: ${{ secrets.DB_HOST_PROD }}
+        DB_USER: ${{ secrets.DB_USER_PROD }}
+        DB_PASSWORD: ${{ secrets.DB_PASSWORD_PROD }}
+        DB_NAME: ${{ secrets.DB_NAME_PROD }}
+        DB_PORT: ${{ secrets.DB_PORT_PROD }}
+        DB_SSLMODE: ${{ secrets.DB_SSLMODE_PROD }}
+        API_KEY: ${{ secrets.API_KEY }}
+      run: |
+        cd src
+        python -m main

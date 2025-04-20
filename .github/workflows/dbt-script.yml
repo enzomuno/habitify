@@ -1,0 +1,48 @@
+name: Run DBT Models
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Executa às 02:00 UTC = 23:00 BRT
+  workflow_dispatch:
+
+jobs:
+  run_dbt:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+
+    - name: Install DBT dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install dbt-postgres
+
+    - name: Set up DBT profile
+      run: |
+        mkdir -p ~/.dbt
+        echo "
+        dbt_habitify_project:
+          target: prod
+          outputs:
+            prod:
+              type: postgres
+              host: ${{ secrets.DB_HOST_PROD }}
+              user: ${{ secrets.DB_USER_PROD }}
+              password: ${{ secrets.DB_PASSWORD_PROD }}
+              port: 5432
+              dbname: ${{ secrets.DB_NAME_PROD }}
+              schema: dbt
+              threads: 1
+              sslmode: ${{ secrets.DB_SSL_MODE_PROD }}
+        " > ~/.dbt/profiles.yml
+
+    - name: Run DBT Models
+      working-directory: ./dbt_habitify_project  # Defina o diretório correto para o dbt_project.yml
+      run: |
+        dbt run  # Esse comando irá rodar todos os modelos DBT
