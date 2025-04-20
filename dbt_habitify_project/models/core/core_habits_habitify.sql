@@ -9,4 +9,5 @@ SELECT
     ,time_of_day_list
     ,remind_time_list
     ,area_id
+    ,updated_at - interval '3 hours' AS updated_at_brt
 FROM {{ ref('stg_habits_habitify') }}

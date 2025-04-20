@@ -18,6 +18,7 @@ processed AS (
         (progress ->> 'target_value')::numeric          AS target_value,
         (progress ->> 'current_value')::numeric         AS current_value,
         (progress ->> 'reference_date')                 AS reference_date
+        ,CURRENT_TIMESTAMP AT TIME ZONE 'UTC'           AS updated_at
     FROM source
 )
 

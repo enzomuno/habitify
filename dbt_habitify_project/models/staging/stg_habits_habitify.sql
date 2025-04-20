@@ -29,7 +29,7 @@ processed AS (
         
         -- Parse JSON: goal
         ,(goal ->> 'value')::float                                              AS goal_value
-        ,(goal ->> 'unit_type')::VARCHAR(15)                                    AS goal_unit,
+        ,(goal ->> 'unit_type')::VARCHAR(15)                                    AS goal_unit
         ,(goal ->> 'periodicity')::VARCHAR(15)                                  AS goal_periodicity
         
         -- Recurrence split (ical format, separando start e regra)
@@ -47,6 +47,7 @@ processed AS (
 
         -- Campo de prioridade (parece ser ruído, vamos tentar converter)
         ,NULLIF(priority::float, 0)                                             AS numeric_priority
+        ,CURRENT_TIMESTAMP AT TIME ZONE 'UTC'                                   AS updated_at
     FROM source
 )
 
