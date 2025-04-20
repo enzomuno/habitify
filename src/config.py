@@ -18,4 +18,9 @@ def get_db_conn():
     db_name = os.getenv("DB_NAME_PROD")
     db_ssl_mode = os.getenv("DB_SSL_MODE_PROD", "require")
 
-    return f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}?sslmode={db_ssl_mode}"
+        # Verifique se as variáveis estão sendo lidas corretamente
+    print(f"DB_USER_PROD: {db_user}")
+    print(f"DB_HOST_PROD: {db_host}")
+    print(f"DB_NAME_PROD: {db_name}")
+
+    return f"postgresql://{db_user}:{db_password}@{db_host}:5432/{db_name}?sslmode={db_ssl_mode}"
